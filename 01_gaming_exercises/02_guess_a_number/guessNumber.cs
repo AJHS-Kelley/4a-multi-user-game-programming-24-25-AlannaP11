@@ -10,7 +10,7 @@ class GuessNumber {
     int secretNumber = rnd.Next(101); //generate from 0 to 100
     // int secretNumber = rnd.Next(25, 1000); //generate from 25 to 1000
     //Console.WriteLine(secretNumber); //comment out after testing
-    Console.WriteLine("Secret number:" + secretNumber);
+    //Console.WriteLine("Secret number:" + secretNumber);
 
     //while loop
     while(numGuesses < maxGuesses)
