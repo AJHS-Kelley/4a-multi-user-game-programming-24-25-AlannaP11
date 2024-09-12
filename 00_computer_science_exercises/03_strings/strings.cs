@@ -9,10 +9,10 @@ class Strings {
     //properties are things that describe the object such as length, values, data type, etc
     //methods are built in functions related to that object
     //length is an important property for strings
-    Console.WriteLine(greeting.length);
-    Console.WriteLine(goodbye.length);
+    Console.WriteLine(greeting.Length);
+    Console.WriteLine(goodbye.Length);
 
-    if (greeting.length > goodbye.length)
+    if (greeting.Length > goodbye.Length)
     {
       Console.WriteLine("The greeting has more characters than the goodbye.\n");
     }
@@ -38,6 +38,14 @@ class Strings {
     Console.WriteLine(goodbye[0]); //prints the character at the index 0
     Console.WriteLine(goodbye[4]); //replace x with what to print the 5th character? 4
     //where is it in my string?
-    Console.WriteLine(greeting.INdexOf("y"));
+    Console.WriteLine(greeting.IndexOf("y"));
+    //finding parts of a string
+    string fullName = "Billy Mays";
+    //what letter?
+    int lastInitial = fullName.IndexOf("M");
+    //find the substring
+    string lastName = fullName.Substring(lastInitial);
+    //print it
+    Console.WriteLine(lastName);
   }
 }
