@@ -4,7 +4,7 @@ class GuessNumber {
     int numGuesses = 0;
     int maxGuesses = 4;
     int guess;
-
+    // Code checked, 100%.  
     //generate secret number here
     Random rnd = new Random(); //create an object named rnd that is a copy of the random() class
     int secretNumber = rnd.Next(101); //generate from 0 to 100
