@@ -3,7 +3,7 @@ class RockPaperScissors {
   static void Main() {
     //player variables
     int playerScore = 0;
-    string choiceTextInput;
+    ///string choiceTextInput;
     string playerChoice;
     //cpu variables
     int cpuChoice;
@@ -12,7 +12,17 @@ class RockPaperScissors {
     Console.WriteLine("Welcome to rock, paper, scissors. The rules are simple. Scissors beats paper, paper beats rock, and rock beats scissors. The winner earns a point each round. If it ends in a draw, no points are awarded. The first player to get 5 points wins. \nWhat's your name? Type it in the console and press enter.");
     string playerName = Console.ReadLine();
     Console.WriteLine($"Your name is {playerName}");
-    Console.WriteLine($"So, {playerName}, What will you choose?");
+
+    
+      if (playerScore == 5)
+    {
+      Console.WriteLine($"{playerName} has won the game! Thanks for playing!");
+    }
+    else if (cpuScore == 5)
+    {
+      Console.WriteLine($"CPU has won the game! Thanks for playing!");
+    }
+    
     
     Random rnd = new Random();
 
@@ -39,6 +49,7 @@ class RockPaperScissors {
     // {
     //     Console.WriteLine("You may have made a typo. Please try again.");
     // }
+    Console.WriteLine($"\nSo, {playerName}, What will you choose?");
 
            playerChoice = Console.ReadLine().ToLower();
          if (playerChoice == "rock")
@@ -60,7 +71,7 @@ class RockPaperScissors {
 
     //cpu selects here
     cpuChoice = rnd.Next(1, 3);
-    Console.WriteLine(cpuChoice);
+    // Console.WriteLine(cpuChoice);
             if (cpuChoice == 1)
     {
       Console.WriteLine("CPU chose Rock!");
