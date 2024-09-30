@@ -33,7 +33,7 @@ class RPS {
 
 
     //cpu selects here
-    cpuChoice = rnd.Next(1, 3);
+    cpuChoice = rnd.Next(1, 4);
     // Console.WriteLine(cpuChoice);
             if (cpuChoice == 1)
     {
@@ -49,7 +49,7 @@ class RPS {
     }
 
     //player selects here
-    playerChoice = rnd.Next(1, 3);
+    playerChoice = rnd.Next(1, 4);
     // Console.WriteLine(cpuChoice);
             if (playerChoice == 1)
     {
