@@ -4,7 +4,7 @@ class RPS {
     //player variables
     int playerScore = 0;
     ///string choiceTextInput;
-    string playerChoice;
+    int playerChoice;
     //cpu variables
     int cpuChoice;
     int cpuScore = 0;
@@ -18,7 +18,7 @@ class RPS {
     
       if (playerScore == 5)
     {
-      Console.WriteLine($"{playerName} has won the game! Thanks for playing!");
+      Console.WriteLine("Player has won the game! Thanks for playing!");
     }
     else if (cpuScore == 5)
     {
@@ -28,48 +28,9 @@ class RPS {
     
     Random rnd = new Random();
 
-  while(playerScore < 5 && cpuScore < 5)
+  while(loopCount < loopsReqs)
     {
-//player selects here
-    //   choiceTextInput = Console.ReadLine().ToLower();
-    //     if (choiceTextInput == "rock")
-    // {
-    //   playerChoice = 1;
-    //   Console.WriteLine($"{playerName} chose Rock!");
-    // }
-    // else if (choiceTextInput == "paper")
-    // {
-    //   playerChoice = 2;
-    //   Console.WriteLine($"{playerName} chose Paper!");
-    // }
-    // else if (choiceTextInput == "scissors")
-    // {
-    //   playerChoice = 3;
-    //   Console.WriteLine($"{playerName} chose Scissors!");
-    // }
-    // else
-    // {
-    //     Console.WriteLine("You may have made a typo. Please try again.");
-    // }
-    Console.WriteLine($"\nSo, {playerName}, What will you choose?");
 
-           playerChoice = Console.ReadLine().ToLower();
-         if (playerChoice == "rock")
-     {
-       Console.WriteLine($"{playerName} chose Rock!");
-     }
-     else if (playerChoice == "paper")
-     {
-       Console.WriteLine($"{playerName} chose Paper!");
-     }
-     else if (playerChoice == "scissors")
-     {
-       Console.WriteLine($"{playerName} chose Scissors!");
-     }
-     else
-     {
-         Console.WriteLine("You may have made a typo. Please try again.");
-     }
 
     //cpu selects here
     cpuChoice = rnd.Next(1, 3);
@@ -87,56 +48,65 @@ class RPS {
       Console.WriteLine("CPU chose Scissors!");
     }
 
+    //player selects here
+    playerChoice = rnd.Next(1, 3);
+    // Console.WriteLine(cpuChoice);
+            if (playerChoice == 1)
+    {
+      Console.WriteLine("Player chose Rock!");
+    }
+    else if (playerChoice == 2)
+    {
+      Console.WriteLine("Player chose Paper!");
+    }
+    else
+    {
+      Console.WriteLine("Player chose Scissors!");
+    }
+
+
       //player's choice and cpu's choice are compared, scores are printed
       
-      if (playerChoice == "rock" && cpuChoice == 2)
+      if (playerChoice == 1 && cpuChoice == 2)
       {
-        Console.WriteLine("CPU wins!");
+        Console.WriteLine("CPU wins!\n");
         cpuScore++;
-        Console.WriteLine($"{playerName}'s score is {playerScore}");
-        Console.WriteLine($"CPU's score is {cpuScore}");
       }
-      else if (playerChoice == "rock" && cpuChoice == 3)
+      else if (playerChoice == 1 && cpuChoice == 3)
       {
-        Console.WriteLine($"{playerName} wins!");
+        Console.WriteLine("Player wins!\n");
         playerScore++;
-                Console.WriteLine($"{playerName}'s score is {playerScore}");
-        Console.WriteLine($"CPU's score is {cpuScore}");
       }
-      else if (playerChoice == "paper" && cpuChoice == 1)
+      else if (playerChoice == 2 && cpuChoice == 1)
       {
-        Console.WriteLine($"{playerName} wins!");
+        Console.WriteLine("Player wins!\n");
         playerScore++;
-                Console.WriteLine($"{playerName}'s score is {playerScore}");
-        Console.WriteLine($"CPU's score is {cpuScore}");
       }
-      else if (playerChoice == "paper" && cpuChoice == 3)
+      else if (playerChoice == 2 && cpuChoice == 3)
       {
-        Console.WriteLine("CPU wins!");
+        Console.WriteLine("CPU wins!\n");
         cpuScore++;
-                Console.WriteLine($"{playerName}'s score is {playerScore}");
-        Console.WriteLine($"CPU's score is {cpuScore}");
       }
-      else if (playerChoice == "scissors" && cpuChoice == 1)
+      else if (playerChoice == 3 && cpuChoice == 1)
       {
-        Console.WriteLine("CPU wins!");
+        Console.WriteLine("CPU wins!\n");
         cpuScore++;
-                Console.WriteLine($"{playerName}'s score is {playerScore}");
-        Console.WriteLine($"CPU's score is {cpuScore}");
       }
-      else if (playerChoice == "scissors" && cpuChoice == 2)
+      else if (playerChoice == 3 && cpuChoice == 2)
       {
-        Console.WriteLine($"{playerName} wins!");
+        Console.WriteLine("Player wins!\n");
         playerScore++;
-                Console.WriteLine($"{playerName}'s score is {playerScore}");
-        Console.WriteLine($"CPU's score is {cpuScore}");
+  
       }
       else
       {
-        Console.WriteLine("Draw!");
-                Console.WriteLine($"{playerName}'s score is {playerScore}");
-        Console.WriteLine($"CPU's score is {cpuScore}");
+        Console.WriteLine("Draw!\n");
+        numDraws++;
       }
+      loopCount++;
     }
+    Console.WriteLine($"Number of player wins: {playerScore}");
+    Console.WriteLine($"Number of CPU wins: {cpuScore}");
+    Console.WriteLine($"Number of draws: {numDraws}");
   }
 }
