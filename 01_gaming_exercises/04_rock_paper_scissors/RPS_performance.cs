@@ -37,15 +37,15 @@ class RPS {
     // Console.WriteLine(cpuChoice);
             if (cpuChoice == 1)
     {
-      Console.WriteLine("CPU chose Rock!");
+      // Console.WriteLine("CPU chose Rock!");
     }
     else if (cpuChoice == 2)
     {
-      Console.WriteLine("CPU chose Paper!");
+      // Console.WriteLine("CPU chose Paper!");
     }
     else
     {
-      Console.WriteLine("CPU chose Scissors!");
+      // Console.WriteLine("CPU chose Scissors!");
     }
 
     //player selects here
@@ -53,15 +53,15 @@ class RPS {
     // Console.WriteLine(cpuChoice);
             if (playerChoice == 1)
     {
-      Console.WriteLine("Player chose Rock!");
+      // Console.WriteLine("Player chose Rock!");
     }
     else if (playerChoice == 2)
     {
-      Console.WriteLine("Player chose Paper!");
+      // Console.WriteLine("Player chose Paper!");
     }
     else
     {
-      Console.WriteLine("Player chose Scissors!");
+      // Console.WriteLine("Player chose Scissors!");
     }
 
 
@@ -69,39 +69,46 @@ class RPS {
       
       if (playerChoice == 1 && cpuChoice == 2)
       {
-        Console.WriteLine("CPU wins!\n");
-        cpuScore++;
+        // Console.WriteLine("CPU wins!\n");
+        // cpuScore++;
+        cpuScore = cpuScore + 1;
       }
       else if (playerChoice == 1 && cpuChoice == 3)
       {
-        Console.WriteLine("Player wins!\n");
-        playerScore++;
+        // Console.WriteLine("Player wins!\n");
+        // playerScore++;
+        playerScore = playerScore + 1;
       }
       else if (playerChoice == 2 && cpuChoice == 1)
       {
-        Console.WriteLine("Player wins!\n");
-        playerScore++;
+        // Console.WriteLine("Player wins!\n");
+        // playerScore++;
+        playerScore = playerScore + 1;
       }
       else if (playerChoice == 2 && cpuChoice == 3)
       {
-        Console.WriteLine("CPU wins!\n");
-        cpuScore++;
+        // Console.WriteLine("CPU wins!\n");
+        // cpuScore++;
+        cpuScore = cpuScore + 1;
       }
       else if (playerChoice == 3 && cpuChoice == 1)
       {
-        Console.WriteLine("CPU wins!\n");
-        cpuScore++;
+        // Console.WriteLine("CPU wins!\n");
+        // cpuScore++;
+        cpuScore = cpuScore + 1;
       }
       else if (playerChoice == 3 && cpuChoice == 2)
       {
-        Console.WriteLine("Player wins!\n");
-        playerScore++;
+        // Console.WriteLine("Player wins!\n");
+        // playerScore++;
+        playerScore = playerScore + 1;
   
       }
       else
       {
-        Console.WriteLine("Draw!\n");
-        numDraws++;
+        // Console.WriteLine("Draw!\n");
+        // numDraws++;
+        numDraws = numDraws + 1;
       }
       loopCount++;
     }
