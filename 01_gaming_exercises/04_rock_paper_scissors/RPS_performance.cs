@@ -66,8 +66,19 @@ class RPS {
 
 
       //player's choice and cpu's choice are compared, scores are printed
-      
-      if (playerChoice == 1 && cpuChoice == 2)
+        if (playerChoice == 1 && cpuChoice == 1)
+      {
+        numDraws = numDraws + 1;
+      }
+        else if (playerChoice == 2 && cpuChoice == 2)
+      {
+        numDraws = numDraws + 1;
+      }
+        else if (playerChoice == 3 && cpuChoice == 3)
+      {
+        numDraws = numDraws + 1;
+      }
+      else if (playerChoice == 1 && cpuChoice == 2)
       {
         // Console.WriteLine("CPU wins!\n");
         // cpuScore++;
@@ -104,12 +115,12 @@ class RPS {
         playerScore = playerScore + 1;
   
       }
-      else
-      {
-        // Console.WriteLine("Draw!\n");
-        // numDraws++;
-        numDraws = numDraws + 1;
-      }
+      // else
+      // {
+      //   // Console.WriteLine("Draw!\n");
+      //   // numDraws++;
+      //   numDraws = numDraws + 1;
+      // }
       loopCount++;
     }
     Console.WriteLine($"Number of player wins: {playerScore}");
