@@ -128,6 +128,8 @@ class DataTypesOperators {
     Console.WriteLine("How many people are rapidly approaching your location? Enter an integer value and press Enter.\n");
     int numPeople = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine(numPeople + numPeople);
+    //you can also covert to a double when using Console.ReadLine();
+    //Convert.ToDouble(Console.ReadLine())
 
 
 
